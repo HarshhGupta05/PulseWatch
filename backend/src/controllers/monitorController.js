@@ -1,7 +1,7 @@
-const Monitor = require("../models/Monitor");
+import Monitor from "../models/Monitor.js";
 
 
-const getMonitors = async (req, res) => {
+export const getMonitors = async (req, res) => {
     try{
         const monitors = await Monitor.find({ userId : req.user.id});
         res.json(monitors);
@@ -32,3 +32,4 @@ export const deleteMonitor = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
