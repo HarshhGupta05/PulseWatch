@@ -1,9 +1,9 @@
 // src/pages/MonitorDetailPage.jsx
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import axiosInstance from '../api/axios'
-import UptimeChart from '../components/UptimeChart'
-import Navbar from '../components/Navbar'
+import axiosInstance from '../api/axios.js'
+import UptimeChart from '../components/UptimeChart.jsx'
+import Navbar from '../components/Navbar.jsx'
 
 export default function MonitorDetailPage() {
   const { id } = useParams()
